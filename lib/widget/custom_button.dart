@@ -18,10 +18,10 @@ class CustomButton extends StatelessWidget {
       child: Container(
         height: height,
         width: width,
-        margin: margin,
+        margin: EdgeInsets.all(5),
         decoration:  BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(5)),
-            border: Border.all(width: 2,color: Colors.white),
+            border: Border.all(width: 2,color:Color(0xFF1E4680),),
             gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
