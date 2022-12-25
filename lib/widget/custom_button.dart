@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/widget/custom_text.dart';
 
 class CustomButton extends StatelessWidget {
   final double width;
@@ -17,25 +19,25 @@ class CustomButton extends StatelessWidget {
         height: height,
         width: width,
         margin: margin,
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(50)),
+        decoration:  BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            border: Border.all(width: 2,color: Colors.white),
             gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
                   Color(0xff0D0B4A),
                   Color(0xff0D0B4A),
-                  Color(0xFF1E4680),
+                  // Color(0xFF1E4680),
                   Color(0xff0D0B4A),
                   Color(0xff0D0B4A),
                 ])),
         child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
+          child:CustomTextView(
+            text: text,
+            fontColor: Colors.white,
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
