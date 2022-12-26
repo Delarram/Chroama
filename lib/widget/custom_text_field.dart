@@ -22,7 +22,6 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin:margin,
-
       height: height,
       color: color,
       child:  TextField(
@@ -34,7 +33,7 @@ class CustomTextField extends StatelessWidget {
             suffix:suffixIcon,
             labelText: labelText,
             labelStyle: TextStyle(color: Colors.grey),
-            border: OutlineInputBorder(
+            border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(7)),
             ),
         ),

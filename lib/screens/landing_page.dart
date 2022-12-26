@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/screens/login.dart';
 import '../../widget/custom_button.dart';
 import '../../widget/custom_text.dart';
 
@@ -119,12 +120,12 @@ class _LandingPageState extends State<LandingPage> {
                           nextPage: () {
                             Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) =>  Container()
+                                    builder: (context) =>  LoginTextField()
                                 ),
                                     (route) => false);
                           },
-                          text: 'LogIn',
-                          height: 50,
+                          text: 'Log In',
+                          height: 40,
                           width: double.infinity,
                         ),
                       ),
@@ -132,10 +133,10 @@ class _LandingPageState extends State<LandingPage> {
                       Expanded(
                         child: CustomButton(
                           nextPage: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=>Container()));
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=>const LoginTextField()));
                           },
-                          text: 'SignIn',
-                          height: 50,
+                          text: 'Sign In',
+                          height: 40,
                           width: double.infinity,
                         ),
                       ),
@@ -205,7 +206,7 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                         padding: const EdgeInsets.all(3),
                         child: Container(
-                          height: 25,
+                          height: 30,
                           width: 60,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
