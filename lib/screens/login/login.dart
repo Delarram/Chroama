@@ -3,8 +3,8 @@ import 'package:untitled/const/color_const.dart';
 
 import 'package:untitled/widget/custom_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widget/custom_button.dart';
-import '../widget/custom_text_field.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_text_field.dart';
 
 
 class LoginTextField extends StatelessWidget {
