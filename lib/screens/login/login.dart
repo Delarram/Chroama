@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/const/color_const.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/widget/custom_text.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../widget/custom_button.dart';
 import '../../widget/custom_text_field.dart';
 
@@ -16,7 +14,7 @@ class LoginTextField extends StatelessWidget {
       body:SafeArea(
         child:SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 150),
+            padding:  EdgeInsets.symmetric(horizontal: 15.w,vertical: 150.h),
             child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -31,54 +29,44 @@ class LoginTextField extends StatelessWidget {
                   // )),
                   CustomTextView(
                     text: "Please Log In  here",
-                    fontSize: 26,
+                    fontSize: 26.sp,
                     fontColor:Color(0xff36688D),
                     fontWeight: FontWeight.bold,
                   ),
                   SizedBox(height: 30,),
-                  CustomTextField(
+                CustomTextField(
                     margin: EdgeInsets.only(bottom: 15,),
-                    height: 50,
+                    height: 40.h,
                     width: double.infinity,
                     labelText: "Username",
                     obsureText: false,
-                    suffixIcon: Icon(
-                      FontAwesomeIcons.eyeSlash,
-                      color:Colors.grey,
-                      //Color(0xff0D0B4A),
-                      size: 20,
-                    ),
-                  ),SizedBox(height: 15,),
+
+                  ),
+                  SizedBox(height: 15.h,),
                   CustomTextField(
                     margin: EdgeInsets.only(bottom: 15,),
-                    height: 50,
+                    height: 40.h,
                     width: double.infinity,
                     labelText: "Password",
                     obsureText: true,
-                    suffixIcon: Icon(
-                      FontAwesomeIcons.ellipsis,
-                      color: Colors.grey,
-                      // Color(0xff0D0B4A),
-                      size: 20,
-                    ),
-                  ),SizedBox(height: 15,),
+                  ),SizedBox(height: 15.h,),
                   Align(
                     alignment: Alignment.bottomRight,
                     child: CustomTextView(
                       text: "Forgot your password?",
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       fontColor:Colors.grey,
                       //Color(0xFF08061F),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
-                    width: 20,height: 15,
+                    width: 20.w,height: 15.w,
                   ),
                   CustomButton(
                     width: double.infinity,
                     text: "Log In",
-                    height: 40,
+                    height: 40.h,
                     nextPage: (){
                     },
                   )
