@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:untitled/screens/login/login.dart';
+
 import '../../../widget/custom_button.dart';
 import '../../../widget/custom_text.dart';
+import '../login/login.dart';
 
 class LandingPage extends StatefulWidget {
 

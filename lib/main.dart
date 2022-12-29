@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:untitled/screens/googlesignin/google_sign_in.dart';
-import 'package:untitled/screens/landingpage/landing_page.dart';
+import 'package:untitled/pages/googlesignin/google_sign_in.dart';
+
 
 void main() {
   runApp(const MyApp());
