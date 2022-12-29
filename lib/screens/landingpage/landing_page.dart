@@ -202,7 +202,7 @@ class _LandingPageState extends State<LandingPage> {
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.transparent,
                             border: Border.all(
-                                width: 1, color: const Color(0xff31347A))
+                                width: 1, color: const Color(0xff03032b))
                         ),
                         padding: const EdgeInsets.all(3),
                         child: Container(
