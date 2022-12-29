@@ -39,6 +39,7 @@ dependencies:
   flutter_screenutil: ^5.6.0
   font_awesome_flutter: ^10.3.0
   flutter_facebook_auth: ^5.0.6
+  google_sign_in: ^5.4.2
 
 dev_dependencies:
   flutter_test:

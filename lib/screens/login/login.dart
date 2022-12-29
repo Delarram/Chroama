@@ -30,12 +30,12 @@ class LoginTextField extends StatelessWidget {
                   CustomTextView(
                     text: "Please Log In  here",
                     fontSize: 26.sp,
-                    fontColor:Color(0xff36688D),
+                    fontColor:const Color(0xff36688D),
                     fontWeight: FontWeight.bold,
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                 CustomTextField(
-                    margin: EdgeInsets.only(bottom: 15,),
+                    margin: const EdgeInsets.only(bottom: 15,),
                     height: 40.h,
                     width: double.infinity,
                     labelText: "Username",
@@ -44,7 +44,7 @@ class LoginTextField extends StatelessWidget {
                   ),
                   SizedBox(height: 15.h,),
                   CustomTextField(
-                    margin: EdgeInsets.only(bottom: 15,),
+                    margin: const EdgeInsets.only(bottom: 15,),
                     height: 40.h,
                     width: double.infinity,
                     labelText: "Password",
