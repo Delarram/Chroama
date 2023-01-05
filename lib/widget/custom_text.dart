@@ -24,7 +24,7 @@ class CustomTextView extends StatelessWidget {
         overflow: overflow,
         fontSize: fontSize??14.sp,
         fontWeight: fontWeight,
-        color: fontColor,
+        color: fontColor ?? Colors.black,
         height: lineHeight,
         fontFamily:fontFamily,
         decoration: isUnderLine==true?TextDecoration.underline:TextDecoration.none,

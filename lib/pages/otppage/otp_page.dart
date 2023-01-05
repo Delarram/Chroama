@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../../const/image_const.dart';
+import 'otp_body_section.dart';
 
 class OtpPage extends StatelessWidget {
   const OtpPage({Key? key, required this.phoneNumber, this.isFromForgetPassword}) : super(key: key);
@@ -59,7 +60,7 @@ class OtpPage extends StatelessWidget {
                   image: DecorationImage(
                       image: AssetImage(iChildren)),
                 ),
-
+                child:  OtpBodySection(phoneNumber: phoneNumber,isFromFrogetPassword: isFromForgetPassword!,)
             ),
           ),
         )
