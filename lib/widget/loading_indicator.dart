@@ -7,6 +7,7 @@ void showLoadingIndicator(BuildContext context) {
     content: Column(
       children: [
         CircularProgressIndicator(
+          color: Colors.blue,
         ),
         Container(
             margin: const EdgeInsets.only(left: 9),
