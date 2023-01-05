@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:untitled/screens/login/login.dart';
+
 import '../../../widget/custom_button.dart';
 import '../../../widget/custom_text.dart';
+import '../login/login.dart';
 
 class LandingPage extends StatefulWidget {
 
@@ -202,7 +203,7 @@ class _LandingPageState extends State<LandingPage> {
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.transparent,
                             border: Border.all(
-                                width: 1, color: const Color(0xff31347A))
+                                width: 1, color: const Color(0xff03032b))
                         ),
                         padding: const EdgeInsets.all(3),
                         child: Container(
