@@ -9,7 +9,7 @@ void showLoadingIndicator(BuildContext context) {
         CircularProgressIndicator(
         ),
         Container(
-            margin: const EdgeInsets.only(left: 7),
+            margin: const EdgeInsets.only(left: 9),
             child: CustomTextView(text: "Please wait",)),
       ],
     ),
