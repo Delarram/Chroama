@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
+import '../../widget/custom_button.dart';
 import '../../widget/custom_text.dart';
+import '../../widget/loading_indicator.dart';
 import 'custom_otp_textfield.dart';
 
 class OtpBodySection extends StatelessWidget {
@@ -80,6 +83,13 @@ class OtpBodySection extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
+              CustomButton(
+                  width: double.infinity,
+                  height: 45,
+                  text: "Check",
+                   nextPage: () {
+                     showLoadingIndicator(context);
+                   },),
             ],
           ),
         ),
