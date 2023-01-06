@@ -5,10 +5,9 @@ import '../../const/image_const.dart';
 import 'otp_body_section.dart';
 
 class OtpPage extends StatelessWidget {
-  const OtpPage({Key? key, required this.phoneNumber, this.isFromForgetPassword}) : super(key: key);
+  const OtpPage({Key? key}) : super(key: key);
 
-  final String phoneNumber;
-  final bool? isFromForgetPassword;
+
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +59,7 @@ class OtpPage extends StatelessWidget {
                   image: DecorationImage(
                       image: AssetImage(iChildren)),
                 ),
-                child:  OtpBodySection(phoneNumber: phoneNumber,isFromFrogetPassword: isFromForgetPassword!,)
+                child:  OtpBodySection()
             ),
           ),
         )

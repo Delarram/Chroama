@@ -7,7 +7,7 @@ import '../../widget/loading_indicator.dart';
 import 'custom_otp_textfield.dart';
 
 class OtpBodySection extends StatelessWidget {
-  const OtpBodySection({Key? key, required String phoneNumber, required bool isFromFrogetPassword}) : super(key: key);
+  const OtpBodySection({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

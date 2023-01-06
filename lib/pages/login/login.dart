@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/pages/otppage/otp_page.dart';
 import 'package:untitled/widget/custom_text.dart';
 import '../../widget/custom_button.dart';
 import '../../widget/custom_text_field.dart';
@@ -68,6 +69,7 @@ class LoginTextField extends StatelessWidget {
                     text: "Log In",
                     height: 40.h,
                     nextPage: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=>OtpPage()));
                     },
                   )
                 ],

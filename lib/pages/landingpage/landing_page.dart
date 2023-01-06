@@ -6,7 +6,6 @@ import '../../../widget/custom_text.dart';
 import '../login/login.dart';
 
 class LandingPage extends StatefulWidget {
-
   const LandingPage({
     Key? key,
   }) : super(key: key);
@@ -14,7 +13,6 @@ class LandingPage extends StatefulWidget {
   @override
   State<LandingPage> createState() => _LandingPageState();
 }
-
 
 class _LandingPageState extends State<LandingPage> {
   final PageController pageController = PageController();
@@ -24,7 +22,7 @@ class _LandingPageState extends State<LandingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
@@ -43,14 +41,12 @@ class _LandingPageState extends State<LandingPage> {
                         Container(
                           margin: EdgeInsets.only(top: 50.h),
                           child: Center(
-                            child: Image.asset(
-                                "assets/img/splashone.PNG",
-                                fit: BoxFit.fitHeight
-                            ),
+                            child: Image.asset("assets/img/splashone.PNG",
+                                fit: BoxFit.fitHeight),
                           ),
                         ),
                         Container(
-                          margin: const EdgeInsets.only(top: 40,bottom: 10),
+                          margin: const EdgeInsets.only(top: 40, bottom: 10),
                           child: const Center(
                             child: CustomTextView(
                               text: "Welcome To The World Of Language App",
@@ -67,7 +63,8 @@ class _LandingPageState extends State<LandingPage> {
                           margin: const EdgeInsets.all(10),
                           child: const Center(
                             child: CustomTextView(
-                              text: "Learning has never been so easy! With Mystery Language yoy will learn to speak your dream language no time",
+                              text:
+                                  "Learning has never been so easy! With Mystery Language yoy will learn to speak your dream language no time",
                               fontSize: 16,
                               maxLine: 3,
                               textAlign: TextAlign.center,
@@ -113,7 +110,7 @@ class _LandingPageState extends State<LandingPage> {
             if (currentPage == 2)
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
                   child: Row(
                     children: [
                       Expanded(
@@ -121,9 +118,8 @@ class _LandingPageState extends State<LandingPage> {
                           nextPage: () {
                             Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) =>  LoginTextField()
-                                ),
-                                    (route) => false);
+                                    builder: (context) => LoginTextField()),
+                                (route) => false);
                           },
                           text: 'Log In',
                           height: 40,
@@ -134,7 +130,10 @@ class _LandingPageState extends State<LandingPage> {
                       Expanded(
                         child: CustomButton(
                           nextPage: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=>const LoginTextField()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const LoginTextField()));
                           },
                           text: 'Sign In',
                           height: 40,
@@ -147,14 +146,13 @@ class _LandingPageState extends State<LandingPage> {
               )
             else
               Padding(
-                padding:
-                const EdgeInsets.only(bottom: 30, left: 20, right: 20),
+                padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         setState(() {
                           if (currentPage == 0) {
                             currentPage = 2;
@@ -166,8 +164,7 @@ class _LandingPageState extends State<LandingPage> {
                               duration: const Duration(milliseconds: 300));
                         });
                       },
-                      child:
-                      Column(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const CustomTextView(
@@ -203,14 +200,14 @@ class _LandingPageState extends State<LandingPage> {
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.transparent,
                             border: Border.all(
-                                width: 1, color: const Color(0xff03032b))
-                        ),
+                                width: 1, color: const Color(0xff03032b))),
                         padding: const EdgeInsets.all(3),
                         child: Container(
-                          height: 30,
-                          width: 60,
+                          height: 35,
+                          width: 80,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
+                            border: Border.all(width: 1, color: Colors.white),
                             color: const Color(0xff31347A),
                           ),
                           child: const Icon(

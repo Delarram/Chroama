@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/pages/googlesignin/google_sign_in.dart';
+import 'package:untitled/pages/landingpage/landing_page.dart';
 
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         return
           const MaterialApp(
               debugShowCheckedModeBanner: false,
-              home: GoogleSignInSecond()
+              home: LandingPage()
            );
       },
     );
