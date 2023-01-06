@@ -15,8 +15,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
            StatusBarSection(),
-            Card(child: AppbarSection(),),
-            WelcomeSection()
+            AppbarSection(),
+            WelcomeSection(),
           ],
         ),
       ),
