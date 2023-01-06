@@ -12,7 +12,7 @@ class WelcomeSection extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 15,horizontal:15),
       decoration: BoxDecoration(
           color: Colors.cyan,
-          borderRadius: BorderRadius.circular(30)
+
       ),
       height: 80.h,width: double.infinity,
       child:Center(child: CustomTextView(text: "Hello, Welcome From Poudel's class",fontColor: Colors.white,fontWeight: FontWeight.w600,fontSize: 30,textAlign: TextAlign.center,)),
