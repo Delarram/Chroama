@@ -28,10 +28,11 @@ class AppbarSection extends StatelessWidget {
             const CircleAvatar(
               radius: 20,
               foregroundColor: Colors.amber,
-            ),SizedBox(width: 7,),
+            ),
+            const SizedBox(width: 7,),
            Column(
              crossAxisAlignment: CrossAxisAlignment.start,
-             children: [
+             children:const [
                CustomTextView(
                  text: "Delarram",
                  fontColor: Colors.black,
