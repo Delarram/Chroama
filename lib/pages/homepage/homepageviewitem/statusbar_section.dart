@@ -26,13 +26,25 @@ class StatusBarSection extends StatelessWidget {
             CustomTextView(text: "Home",fontColor: Colors.white,),
           ],
           ),
-          Row(children: [
-            Container(height: 60.w,width: 60.w,decoration: BoxDecoration(
-              shape: BoxShape.circle,color: Colors.white
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Container(height: 60.w,width: 60.w,decoration: BoxDecoration(
+                shape: BoxShape.circle,color: Colors.white
+              ),
+              ),
+              Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15.r),
+              ),height: 30.h,child: Center(child: CustomTextView(text: "Beginner Course",)
+              ),
+              ),
+            ],
             ),
-            ),
-
-          ],
           )
         ],
       ),
