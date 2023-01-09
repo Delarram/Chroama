@@ -15,8 +15,6 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
            StatusBarSection(),
-            AppbarSection(),
-            WelcomeSection(),
            Padding(
              padding: const EdgeInsets.symmetric(horizontal: 12),
              child: Row(
