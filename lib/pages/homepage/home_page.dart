@@ -62,6 +62,7 @@ class HomePage extends StatelessWidget {
                        SizedBox(
                         height: 4.h,
                       ),
+
                       CustomTextView(text: "testing")
                     ],
                   );
