@@ -9,43 +9,68 @@ class StatusBarSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 200.h,
-      padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 20.h),
-      decoration:const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [
-                Color(0xffCA76FB),
-                Color(0xff789AFB),
-                Color(0xff46FBF0),
-              ]
-          )
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [
+        Color(0xffCA76FB),
+        Color(0xff789AFB),
+        Color(0xff46FBF0),
+      ])),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(children: [
-            Icon(Icons.arrow_back_ios_new,color: Colors.white,),SizedBox(width: 100.w,),
-            CustomTextView(text: "Home",fontColor: Colors.white,),
-          ],
+          Row(
+            children: [
+              Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.white,
+              ),
+              SizedBox(
+                width: 100.w,
+              ),
+              CustomTextView(
+                text: "Home",
+                fontColor: Colors.white,
+              ),
+            ],
           ),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Container(height: 60.w,width: 60.w,decoration: BoxDecoration(
-                shape: BoxShape.circle,color: Colors.white
-              ),
-              ),
-              Container(
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15.r),
-              ),height: 30.h,child: Center(child: CustomTextView(text: "Beginner Course",)
-              ),
-              ),
-            ],
+                Container(
+                  height: 60.w,
+                  width: 60.w,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.white),
+                ),
+                Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15.r),
+                  ),
+                  height: 30.h,
+                  child: Center(
+                      child: CustomTextView(
+                    text: "Beginner Course",
+                  )),
+                ),
+              ],
             ),
-          )
+          ),
+          CustomTextView(
+            text: "English Course",
+            fontColor: Colors.white,
+            fontWeight: FontWeight.w500,
+            fontSize: 20.sp,
+          ),
+          SizedBox(height: 15.h,),
+          Row(children: [
+            CustomTextView(text: "5 Chapter",fontColor: Colors.grey.shade300,),SizedBox(width: 50.w,),
+            CustomTextView(text: "Total 60:00",fontColor: Colors.grey.shade300,)
+          ],)
         ],
       ),
     );
