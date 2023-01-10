@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/widget/custom_button.dart';
 import 'package:untitled/widget/custom_text.dart';
 import 'homepageviewitem/statusbar_section.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -84,6 +85,17 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 210,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomTextView(text: "Beginner course ",fontWeight: FontWeight.w500,fontSize: 20.sp,fontColor: Colors.black45,),
+                  CustomTextView(text: "All",fontWeight: FontWeight.w500,fontSize: 14.sp,fontColor: Colors.black45)
+                ],
+              ),
+            ),
+            SizedBox(height: 10,),
             Container(height: 200,width: double.infinity,
             child:  ListView.separated(
               itemCount: 5,
@@ -98,48 +110,58 @@ class HomePage extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12)
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
-                            child: CachedNetworkImage(
-                              height: 100,
-                              width: 100,
-                              fit: BoxFit.fill,
-                              imageUrl: "https://images.squarespace-cdn.com/content/v1/5a0d6e5dcd39c35d0c651639/1561378813145-POA9V823FOBYVV7RPH4K/5+Beginner+ESL+Lesson+Plans+You+Need+to+Try?format=500w",
-                              errorWidget: (
-                                  context,
-                                  url,
-                                  error,
-                                  ) => const Icon(Icons.error), progressIndicatorBuilder: (context, url, downloadProgress,) =>
-                                Center(
-                                  child: CircularProgressIndicator(
-                                      value: downloadProgress.progress),
-                                ),
-                            )),
-                      ),SizedBox(height: 10,),
-                      Column(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12,top: 50),
-                          child: CustomTextView(
-                            text: "Beginner Cource",
-                            fontColor: Colors.black,
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 4.h,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12),
-                          child: CustomTextView(text: "testing"),
-                        )
-                      ],)
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10,top: 30),
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(100),
+                                child: CachedNetworkImage(
+                                  height: 100,
+                                  width: 100,
+                                  fit: BoxFit.fill,
+                                  imageUrl: "https://images.squarespace-cdn.com/content/v1/5a0d6e5dcd39c35d0c651639/1561378813145-POA9V823FOBYVV7RPH4K/5+Beginner+ESL+Lesson+Plans+You+Need+to+Try?format=500w",
+                                  errorWidget: (
+                                      context,
+                                      url,
+                                      error,
+                                      ) => const Icon(Icons.error), progressIndicatorBuilder: (context, url, downloadProgress,) =>
+                                    Center(
+                                      child: CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                                    ),
+                                )),
+                          ),SizedBox(height: 10,),
+                          Column(children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 12,top: 50),
+                              child: CustomTextView(
+                                text: "Beginner Cource",
+                                fontColor: Colors.black,
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 4.h,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 12),
+                              child: CustomTextView(text: "testing"),
+                            )
+                          ],)
 
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CustomButton(width: double.infinity, text: "view more", height: 40, nextPage: (){},
+
+                        ),
+                      )
                     ],
                   ),
                 );
