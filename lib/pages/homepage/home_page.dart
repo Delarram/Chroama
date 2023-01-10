@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/pages/homepage/homepageviewitem/beginner_title_section.dart';
 import 'package:untitled/widget/custom_button.dart';
 import 'package:untitled/widget/custom_text.dart';
 import 'homepageviewitem/statusbar_section.dart';
@@ -85,18 +86,9 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 210,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CustomTextView(text: "Beginner course ",fontWeight: FontWeight.w500,fontSize: 20.sp,fontColor: Colors.black45,),
-                  CustomTextView(text: "All",fontWeight: FontWeight.w500,fontSize: 14.sp,fontColor: Colors.black45)
-                ],
-              ),
-            ),
+          BeginnerTitleSection(),
             SizedBox(height: 10,),
-            Container(height: 200,width: double.infinity,
+            SizedBox(height: 200,width: double.infinity,
             child:  ListView.separated(
               itemCount: 5,
               shrinkWrap: true,
@@ -153,13 +145,11 @@ class HomePage extends StatelessWidget {
                               child: CustomTextView(text: "testing"),
                             )
                           ],)
-
                         ],
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: CustomButton(width: double.infinity, text: "view more", height: 40, nextPage: (){},
-
                         ),
                       )
                     ],
