@@ -9,10 +9,143 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const StatusBarSection(),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                const StatusBarSection(),
+                Positioned(
+                  bottom: -200,
+                  left: 0.0,
+                  right: 0.0,
+                  child: Container(
+                    height: 300,
+                    child: ListView.separated(
+                      itemCount: 5,
+                      shrinkWrap: true,
+                      padding: EdgeInsets.only(left: 12),
+                      scrollDirection: Axis.horizontal,
+                      separatorBuilder: (BuildContext context, int index) => SizedBox(width: 10,),
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(12),
+                                    child: CachedNetworkImage(
+                                      height: 200,
+                                      width: 250,
+                                      fit: BoxFit.fill,
+                                      imageUrl: "https://images.squarespace-cdn.com/content/v1/5a0d6e5dcd39c35d0c651639/1561378813145-POA9V823FOBYVV7RPH4K/5+Beginner+ESL+Lesson+Plans+You+Need+to+Try?format=500w",
+                                      errorWidget: (
+                                          context,
+                                          url,
+                                          error,
+                                          ) => const Icon(Icons.error), progressIndicatorBuilder: (context, url, downloadProgress,) =>
+                                        Center(
+                                          child: CircularProgressIndicator(
+                                              value: downloadProgress.progress),
+                                        ),
+                                    )),
+                              ),SizedBox(height: 5,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 12),
+                                child: CustomTextView(
+                                  text: "Beginner Cource",
+                                  fontColor: Colors.black,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 4.h,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 12),
+                                child: CustomTextView(text: "testing"),
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 210,),
+            Container(height: 200,width: double.infinity,
+            child:  ListView.separated(
+              itemCount: 5,
+              shrinkWrap: true,
+              padding: EdgeInsets.only(left: 12),
+              scrollDirection: Axis.horizontal,
+              separatorBuilder: (BuildContext context, int index) => SizedBox(width: 10,),
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  width: 300,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12)
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 30),
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: CachedNetworkImage(
+                              height: 100,
+                              width: 100,
+                              fit: BoxFit.fill,
+                              imageUrl: "https://images.squarespace-cdn.com/content/v1/5a0d6e5dcd39c35d0c651639/1561378813145-POA9V823FOBYVV7RPH4K/5+Beginner+ESL+Lesson+Plans+You+Need+to+Try?format=500w",
+                              errorWidget: (
+                                  context,
+                                  url,
+                                  error,
+                                  ) => const Icon(Icons.error), progressIndicatorBuilder: (context, url, downloadProgress,) =>
+                                Center(
+                                  child: CircularProgressIndicator(
+                                      value: downloadProgress.progress),
+                                ),
+                            )),
+                      ),SizedBox(height: 10,),
+                      Column(children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12,top: 50),
+                          child: CustomTextView(
+                            text: "Beginner Cource",
+                            fontColor: Colors.black,
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 4.h,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12),
+                          child: CustomTextView(text: "testing"),
+                        )
+                      ],)
+
+                    ],
+                  ),
+                );
+              },
+            ),
+            )
           ],
         ),
       ),
